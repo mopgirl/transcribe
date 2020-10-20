@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TranscribeComponent } from './pages/transcribe/transcribe/transcribe.component';
+import { PageNotFoundComponent } from './pages/error/notfound/page-not-found/page-not-found.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path : '', component : TranscribeComponent },
+  { path : '**', component : PageNotFoundComponent },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports : [RouterModule.forRoot(routes)],
+  exports : [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
