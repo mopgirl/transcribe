@@ -1,0 +1,16 @@
+<ng-container>
+  <div class="page card">
+    <section class="card text-center">
+      <div class="card-block">
+        <div class="file-upload">
+          <input type="file" ng2FileSelect
+                 [uploader]="uploader"/>
+          <button type="button" (click)="uploader.uploadAll()"
+                  [disabled]="!uploader.getNotUploadedItems().length">
+            Upload
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</ng-container>

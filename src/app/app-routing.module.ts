@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TranscribeComponent } from './pages/transcribe/transcribe/transcribe.component';
+import { TranscribeComponent } from './transcribe/transcribe/transcribe.component';
 import { PageNotFoundComponent } from './pages/error/notfound/page-not-found/page-not-found.component';
 
 const routes: Routes = [

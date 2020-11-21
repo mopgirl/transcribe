@@ -130,5 +130,9 @@
   "defaultProject": "transcribe",
   "cli": {
     "analytics": "8b7c969a-6076-47bd-a3c4-07b4462d7b3c"
-  }
+  },
+  "styles": [
+    "src/styles.less",
+    "node_modules/ngx-toastr/toastr.css"
+  ]
 }
