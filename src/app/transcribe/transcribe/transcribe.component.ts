@@ -3,6 +3,7 @@ import { FileUploadService } from '../../pages/transcribe/service/file-upload.se
 import { FormGroup } from '@angular/forms';
 import { FileUploader } from 'ng2-file-upload';
 import { ToastrService } from 'ngx-toastr';
+import { FileItem } from 'ng2-file-upload/file-upload/file-item.class';
 
 const URL = 'http://localhost:3000/s3/upload';
 
@@ -25,8 +26,8 @@ export class TranscribeComponent implements OnInit {
     this.uploader.onAfterAddingFile = (file) => {
       file.withCredentials = false;
     };
-    this.uploader.onCompleteItem = (item: any, status: any) => {
-      console.log('Uploaded File Details');
+    this.uploader.onCompleteItem = (item: FileItem, status: any) => {
+      console.log(`Uploaded File Details ${ item.file.name }`);
       this.toastr.success('upload');
     };
   }
