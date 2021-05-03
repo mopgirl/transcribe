@@ -2,6 +2,7 @@
 FROM node:12.18.3 as build-stage
 
 WORKDIR /transcribe
+
 COPY ./package*.json /transcribe/
 
 RUN npm install
