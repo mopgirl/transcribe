@@ -12,9 +12,9 @@ ARG configuration=production
 
 #angular build
 RUN npm run build -- --output-path=./dist/out --configuration $configuration
-#
+#nginx install
 FROM nginx:1.15
-#
+#build生成物をCOPY
 COPY --from=build-stage /transcribe/dist/out/ /usr/share/nginx/html
-#nginx.conf コピー
+#nginx.conf COPY
 COPY ./docker/nginx/nginx.conf /etc/nginx/nginx.conf
